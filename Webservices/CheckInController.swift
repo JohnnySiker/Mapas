@@ -40,6 +40,9 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
         // Dispose of any resources that can be recreated.
     }
    
+    /*
+    Esta función consulta los lugares de una url y los guarda en un objeto
+    */
     func getLugares(){
         Alamofire.request(.GET, "http://checkin.clipp.mx/getPlaces.php")
             .responseJSON{ response in
@@ -67,6 +70,10 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
         }
     }
     
+    /*
+    Esta función recibe un objeto de tipo lugar, descarga la imagen de la url. Posteriormente
+    agrega la imágen descargada al objeto de tipo lugar y la agrega al arreglo lugares.
+    */
     func getPlaceImage(lugar:Lugar, url:String){
         Alamofire.request(.GET, url).responseImage{ response in
             if let image = response.result.value {
