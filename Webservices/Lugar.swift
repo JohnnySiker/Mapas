@@ -16,7 +16,7 @@ class Lugar{
     var latitud:Double!
     var longitud:Double!
     
-    
+    //
     init(nombre:String,descripcion: String,latitud:Double,longitud:Double){
         self.nombre = nombre
         self.descripcion = descripcion
