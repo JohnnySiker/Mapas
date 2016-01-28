@@ -20,6 +20,7 @@
 		7C61A2201C57D5C400A8B518 /* WebservicesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61A21F1C57D5C400A8B518 /* WebservicesUITests.swift */; };
 		7C61A22E1C57E3A800A8B518 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61A22D1C57E3A800A8B518 /* LoginController.swift */; };
 		7C61A2301C57E3CA00A8B518 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61A22F1C57E3CA00A8B518 /* SignInController.swift */; };
+		9F1441EA1C5A60C600D17BE1 /* MapaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1441E91C5A60C600D17BE1 /* MapaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		7C61A2211C57D5C400A8B518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C61A22D1C57E3A800A8B518 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		7C61A22F1C57E3CA00A8B518 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		9F1441E91C5A60C600D17BE1 /* MapaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaController.swift; sourceTree = "<group>"; };
 		BE2C0E9637322B7B9C64A274 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F1A2C3FB638BCD86A486FB7D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 				7C61A2061C57D5C400A8B518 /* Assets.xcassets */,
 				7C61A2081C57D5C400A8B518 /* LaunchScreen.storyboard */,
 				7C61A20B1C57D5C400A8B518 /* Info.plist */,
+				9F1441E91C5A60C600D17BE1 /* MapaController.swift */,
 				7C61A22D1C57E3A800A8B518 /* LoginController.swift */,
 				7C61A22F1C57E3CA00A8B518 /* SignInController.swift */,
 				7C33B3A21C591B6C00E66B18 /* CheckInController.swift */,
@@ -348,6 +351,7 @@
 			files = (
 				7C61A2021C57D5C400A8B518 /* ViewController.swift in Sources */,
 				7C33B3A71C5926BF00E66B18 /* Lugar.swift in Sources */,
+				9F1441EA1C5A60C600D17BE1 /* MapaController.swift in Sources */,
 				7C33B3A51C59201A00E66B18 /* LugarCell.swift in Sources */,
 				7C61A2301C57E3CA00A8B518 /* SignInController.swift in Sources */,
 				7C33B3A31C591B6C00E66B18 /* CheckInController.swift in Sources */,

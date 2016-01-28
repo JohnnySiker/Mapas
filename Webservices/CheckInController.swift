@@ -84,6 +84,16 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
         }
     }
     
+    
+    
+    @IBAction func goToMap(sender: UIBarButtonItem) {
+        let mapaController = self.storyboard?.instantiateViewControllerWithIdentifier("MapaController") as! MapaController
+        
+        self.navigationController?.pushViewController(mapaController, animated: true)
+        
+    }
+    
+    
 }
 
 
