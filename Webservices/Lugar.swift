@@ -21,7 +21,7 @@ class Lugar{
         self.nombre = nombre
         self.descripcion = descripcion
         self.latitud = latitud
-        self.longitud = longitudç
+        self.longitud = longitud
     }
     
     func setImagen(imagen:UIImage){

@@ -57,7 +57,10 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
                     let desc = p["descripcion"] as! String
                     
                     let urlImagen = p["url"] as! String
-                    let l = Lugar(nombre: nombre, descripcion: desc)
+                    let latitud = (p["latitud"] as! NSString).doubleValue
+                    let longitud = (p["longitud"] as! NSString).doubleValue
+                    
+                    let l = Lugar(nombre: nombre, descripcion: desc,latitud:latitud,longitud: longitud)
                     
                     self.getPlaceImage(l, url: urlImagen)
                     
