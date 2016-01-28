@@ -50,7 +50,7 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
             do{
                 let json = try NSJSONSerialization.JSONObjectWithData(response.data!, options: .AllowFragments)
                 print(json)
-                
+                //
                 let places = json["places"] as! [Dictionary <String,AnyObject>]
                 for p in places{
                     let nombre = p["nombre"] as! String
