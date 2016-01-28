@@ -13,10 +13,15 @@ class Lugar{
     var imagen:UIImage!
     var nombre:String!
     var descripcion:String!
+    var latitud:Double!
+    var longitud:Double!
     
-    init(nombre:String,descripcion: String){
+    
+    init(nombre:String,descripcion: String,latitud:Double,longitud:Double){
         self.nombre = nombre
         self.descripcion = descripcion
+        self.latitud = latitud
+        self.longitud = longitud
     }
     
     func setImagen(imagen:UIImage){

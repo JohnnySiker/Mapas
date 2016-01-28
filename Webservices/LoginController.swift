@@ -43,7 +43,7 @@ class LoginController: UIViewController {
                         //Éxito
                         print("Éxito")
                         
-                        let checkInController = self.storyboard?.instantiateViewControllerWithIdentifier("CheckInController")
+                        let checkInController = self.storyboard?.instantiateViewControllerWithIdentifier("CheckInNavigation")
                         
                         self.presentViewController(checkInController!, animated: true, completion: nil)
                     }else{

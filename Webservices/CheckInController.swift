@@ -35,9 +35,11 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
         return cell
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let mapaView = self.storyboard?.instantiateViewControllerWithIdentifier("MapaController") as! MapaController
+        mapaView.places = lugares
+        mapaView.selectedPlace = lugares[indexPath.row]
+        self.navigationController?.pushViewController(mapaView, animated: true)
     }
    
     /*
@@ -55,9 +57,12 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
                 for p in places{
                     let nombre = p["nombre"] as! String
                     let desc = p["descripcion"] as! String
+                    let latitud = (p["latitud"] as! NSString).doubleValue
+                    let longitud = (p["longitud"] as! NSString).doubleValue
                     
                     let urlImagen = p["url"] as! String
-                    let l = Lugar(nombre: nombre, descripcion: desc)
+                    
+                    let l = Lugar(nombre: nombre, descripcion: desc,latitud: latitud,longitud: longitud)
                     
                     self.getPlaceImage(l, url: urlImagen)
                     
@@ -83,6 +88,23 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
             self.tableLugares.reloadData()
         }
     }
+    
+    
+    
+    @IBAction func showMapa(sender: UIBarButtonItem) {
+        let mapaView = self.storyboard?.instantiateViewControllerWithIdentifier("MapaController") as! MapaController
+        mapaView.places = lugares
+        self.navigationController?.pushViewController(mapaView, animated: true)
+    }
+    
+    
+    @IBAction func addPlace(sender: CircleButton) {
+        let mapaView = self.storyboard?.instantiateViewControllerWithIdentifier("MapaController") as! MapaController
+        mapaView.places = lugares
+        mapaView.isAddingPlace = true
+        self.navigationController?.pushViewController(mapaView, animated: true)
+    }
+    
     
 }
 
