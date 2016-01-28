@@ -57,6 +57,7 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
                     let desc = p["descripcion"] as! String
                     
                     let urlImagen = p["url"] as! String
+                    
                     let latitud = (p["latitud"] as! NSString).doubleValue
                     let longitud = (p["longitud"] as! NSString).doubleValue
                     
@@ -91,7 +92,7 @@ class CheckInController: UIViewController, UITableViewDelegate,UITableViewDataSo
     
     @IBAction func goToMap(sender: UIBarButtonItem) {
         let mapaController = self.storyboard?.instantiateViewControllerWithIdentifier("MapaController") as! MapaController
-        
+        mapaController.lugares = lugares
         self.navigationController?.pushViewController(mapaController, animated: true)
         
     }
